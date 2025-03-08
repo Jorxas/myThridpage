@@ -38,6 +38,34 @@ p{
 
 
 
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2161f7;
+    color: white;
+    padding: 4rem 2rem;
+}
+
+.contact h2 {
+    font-size: 4rem;
+    line-height: 4.7rem;
+    margin-bottom: 30px;
+}
+
+.contact button{
+    border-color: white;
+    border: solid;
+    border-radius: 30px;
+    padding: 15px 40px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+
+
 #map {
     width: 100%;
     height: 400px; /* Ajuste la hauteur selon tes besoins */
@@ -50,7 +78,6 @@ p{
 .formulaire{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
     gap: 90px;
     color: white;
     background-color: rgba(0, 0, 0, 0.842);
@@ -85,13 +112,49 @@ textarea{
     margin-bottom: 30px;
 }
 
-button{
+.formulaire button{
     border: none;
     border-radius: 20px;
     padding: 8px 40px;
     background-color: white;
     color: black;
     cursor: pointer;
-    margin-bottom: 20px;
+    
 }
+
+
+
+.mainfooter{
+    display: flex;
+    background-color: #2161f7;
+    color: white;
+    padding: 4rem 2rem;
+}
+.mainfooter div{
+    width: 50%;
+}
+.mainfooter h2 {
+    font-size: 4rem;
+    line-height: 4.7rem;
+}
+
+.mainfooter p {
+    font-size: 1.7rem;
+    line-height: 2.3rem;
+    margin-bottom: 30px;
+}
+
+.mainfooter button{
+
+    border: solid;
+    border-radius: 30px;
+    padding: 15px 40px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    
+}
+
+
+
 

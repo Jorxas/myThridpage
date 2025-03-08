@@ -35,6 +35,9 @@ section{
     border-radius: 40px; 
 }
 
+.main_header p {
+    
+}
 
 
 
@@ -65,7 +68,7 @@ section{
     font-weight: bold;
 }
 
-i{
+.cards i{
     align-self: flex-end;
     color: white;
     background-color: #2161f7;

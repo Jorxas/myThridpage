@@ -94,9 +94,10 @@ nav ul a:hover {
 }
 
 .footer_container .items2 {
-    margin-left: auto;
+    
     text-align: right;
 }
+
 
 .netzwerk .button a {
     color: #0f52ef;
@@ -107,6 +108,4 @@ nav ul a:hover {
 .netzwerk .button a:hover {
     color: #274db8;
 }
-
-
 
