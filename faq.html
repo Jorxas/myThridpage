@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.css">
+    <link rel="stylesheet" href="fontawesome-free-6.7.2-web/css/all.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/Home.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="js/faq.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -30,7 +36,89 @@
     </header>
 
     <main>
+        <section>
+            <h1>Frequently asked questions</h1>
+            <div class="frage">
 
+                <div class="frage1">
+                    <button class="accordion">What products does Jorxas offer?</button>
+                    <div class="panel">
+                        <p>Jorxas offers a wide range of e-commerce products including electronics, fashion, home goods, and more, all available online.</p>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="frage2">
+                    <button class="accordion">How can I track my order from Jorxas?</button>
+                    <div class="panel">
+                        <p>You can track your order by logging into your account on Jorxas and visiting the 'Order History' section.</p>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="frage3">
+                    <button class="accordion">What is Jorxas' return policy?</button>
+                    <div class="panel">
+                        <p>Jorxas accepts returns within 30 days of purchase with a receipt, provided the items are in original condition.</p>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="frage4">
+                    <button class="accordion">Does Jorxas ship internationally?</button>
+                    <div class="panel">
+                        <p>Yes, Jorxas ships to several countries worldwide. Shipping costs and delivery times vary by location.</p>
+                    </div>
+                    <hr>
+                </div>    
+                <div class="frage5">
+                    <button class="accordion">How can I contact Jorxas customer support?</button>
+                    <div class="panel">
+                        <p>You can contact Jorxas customer support via email or phone during business hours for assistance with any inquiries.</p>
+                    </div>
+                   
+                </div>
+
+                
+            </div>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <button>Get in touch</button>
+            <div id="map"></div>
+
+            <div class="formulaire">
+                <div class="items1">
+                    <form >
+                        <div class="ref">
+                            <div>
+                                <label for="vorname">First Name</label>
+                                <input type="text" id="vorname">
+                            </div>
+
+                            <div>
+                                <label for="Email">Email</label>
+                                <input type="text" id="Email">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="msg">Message</label>
+                            <textarea name="msg" id="msg"></textarea> 
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="items2">
+                    <h2>Reach Out to Jorxas Team</h2>
+                    <p>Contact us to learn more about our e-commerce products in Germany.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Shop Premium Products Now</h2>
+            <p>Discover our curated selection of high-quality products at Jorxas, designed to meet all your needs with unbeatable prices and convenience.</p>
+            <button>Explore Deals</button>
+        </section>
     </main>
 
     <footer class="footer_container">
@@ -58,14 +146,14 @@
       
 
         <div class="items2">
-            <p>Copyright © 2025,</p>
-            <p>Friedensstraße 18,35394 Gießen</p>
+                <p>Copyright © 2025,</p>
+                <p>Friedensstraße 18,35394 Gießen</p>
         </div>
 
 
 
     </footer>
-
-    
+ 
+  
 </body>
 </html>
