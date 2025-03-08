@@ -23,7 +23,6 @@ section{
     align-items: center;
     justify-content: center;
     
-    
 }
 
 .main_header img{
@@ -35,8 +34,13 @@ section{
     border-radius: 40px; 
 }
 
+.main_header h2{
+    font-size: 3rem;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
 .main_header p {
-    
+    padding-bottom: 80px;
 }
 
 
@@ -114,7 +118,7 @@ section{
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     align-items: center;
     justify-content: center;
 }
