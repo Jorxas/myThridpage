@@ -20,11 +20,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Header Styling */
+/* Header Styling */
 .header_container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 2rem;
     position: sticky;
     top: 0;
     background-color: white;
@@ -43,8 +43,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-left: 10px;
 }
@@ -52,7 +52,8 @@ h1, h2, h3, h4, h5, h6 {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 20px;
+    margin: 20px;
 }
 
 nav ul a {
@@ -66,10 +67,12 @@ nav ul a:hover {
     color: #326bf0;
 }
 
+
 .header_container button {
+    margin-left: auto;
     border: none;
     border-radius: 20px;
-    padding: 10px 15px;
+    padding: 10px 20px;
     background-color: #326bf0;
     color: white;
     font-weight: bold;
@@ -81,6 +84,9 @@ nav ul a:hover {
     background-color: #274db8;
 }
 
+.header_button {
+    margin-left: auto;
+}
 /* Footer Styling */
 .footer_container {
     display: flex;
