@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-6.7.2-web/css/all.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/oders.css">
+    <title>myThirdpage</title>
+</head>
+<body>
+    <!-- lentete de mon navigateur  -->
+    <header class="header_container">
+      
+        <div class="logo">
+            <h1>Jorxas</h1>
+            <img src="img/logo.jpg" alt="my logo">  
+        </div>
+        <nav class="nav_menu">   
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Catalog.html">Catalog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>        
+        
+        <div class="header_button">
+            <button> Contact us </button>
+            <a href="orders.html"><i class="fas fa-shopping-cart"></i> </a>
+        </div>
+    </header>
+
+    <main class="main_container">
+
+        <div id="cart-items"></div>
+
+        
+    </main>
+
+    <footer class="footer_container">
+       
+
+            <div class="items1">
+                <div class="logo">
+                    <h1>Jorxas</h1>
+                    <img src="img/logo.jpg" alt="my logo">  
+                </div>
+            </div>    
+                
+            <div class="netzwerk">
+
+                <div class="button">
+
+                    <a href="https://www.linkedin.com/in/jordan-freddy-pokem-tezo-6426652a3/"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                    <a href=https://github.com/Jorxas><i class="fa-brands fa-github fa-2x"></i></a>
+                    <a href=https://www.instagram.com/tezopokem?igsh=MW13cndwMzFmdXN5aw==><i class="fab fa-instagram fa-2x"></i></a>
+            
+                </div>
+
+            </div>
+            
+      
+
+        <div class="items2">
+            <p>Copyright © 2025,</p>
+            <p>Friedensstraße 18,35394 Gießen</p>
+        </div>
+
+
+
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cartContainer = document.getElementById("cart-items");
+        
+            // Récupérer le panier depuis localStorage
+            let products = JSON.parse(localStorage.getItem("products")) || [];
+            console.log(products);
+            if (products.length === 0) {
+                cartContainer.innerHTML = "<p>Votre panier est vide.</p>";
+                return;
+            }
+        
+            products.forEach(product => {
+                const item = document.createElement("div");
+                item.classList.add("cart-item");
+                item.innerHTML = `
+                    <img src="${product.src}" alt="${product.name}" width="100">
+                    <h3>${product.name}</h3>
+                    <p>${product.price}</p>
+                    <button class="remove" data-name="${product.name}">Supprimer</button>
+                `;
+                cartContainer.appendChild(item);
+            });
+        
+            // Gestion du bouton de suppression
+            document.querySelectorAll(".remove").forEach(button => {
+                button.addEventListener("click", function () {
+                    let name = this.getAttribute("data-name");
+        
+                    // Filtrer pour supprimer l'article
+                    products = products.filter(product => product.name !== name);
+                    localStorage.setItem("products", JSON.stringify(products));
+                    location.reload(); // Rafraîchir la page pour mettre à jour l'affichage
+                });
+            });
+        });
+        </script>
+
+    
+</body>
+</html>
 

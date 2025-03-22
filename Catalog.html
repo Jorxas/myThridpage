@@ -192,6 +192,28 @@
 
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".product-card button");
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    let src = this.parentElement.querySelector("img").src;
+                    console.log(src);
+                    let name = this.parentElement.querySelector("h3").textContent;
+                    let price = this.parentElement.querySelector("p").textContent;
+                    let product = { src, name, price };
+                    let products = JSON.parse(localStorage.getItem("products")) || [];
+                    products.push(product);
+                    localStorage.setItem("products", JSON.stringify(products));
+                    alert("Product added to cart");
+                    console.log(JSON.parse(localStorage.getItem("products")));
+
+                });
+            });
+        })
+
+
+    </script>
     
 </body>
 </html>
