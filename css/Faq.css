@@ -155,6 +155,10 @@ textarea{
     
 }
 
+.mainfooter button:hover{
+    background-color: white;
+    color: black;
+}
 
 
 

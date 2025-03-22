@@ -271,4 +271,10 @@ p{
     border-radius: 100px;
     padding: 13px 25px;
     background-color: transparent;
+    cursor: pointer;
+}
+
+.section7 button:hover{
+    background-color: white;
+    color: #2161f7;
 }
