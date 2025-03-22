@@ -84,13 +84,14 @@
             }
         
             products.forEach(product => {
+
                 const item = document.createElement("div");
                 item.classList.add("cart-item");
                 item.innerHTML = `
                     <img src="${product.src}" alt="${product.name}" width="100">
                     <h3>${product.name}</h3>
                     <p>${product.price}</p>
-                    <button class="remove" data-name="${product.name}">Supprimer</button>
+                    <button class="remove" data-name="${product.name}" data-id="${product.id}">Supprimer</button>
                 `;
                 cartContainer.appendChild(item);
             });
@@ -98,10 +99,10 @@
             // Gestion du bouton de suppression
             document.querySelectorAll(".remove").forEach(button => {
                 button.addEventListener("click", function () {
-                    let name = this.getAttribute("data-name");
+                    let id = Number(this.getAttribute("data-id")) ;
         
                     // Filtrer pour supprimer l'article
-                    products = products.filter(product => product.name !== name);
+                    products = products.filter(product => product.id !== id);
                     localStorage.setItem("products", JSON.stringify(products));
                     location.reload(); // Rafraîchir la page pour mettre à jour l'affichage
                 });
