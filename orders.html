@@ -43,6 +43,11 @@
     
 
     <main class="main_container">
+        <section class="leer">
+            <i class="fas fa-shopping-cart fa-2x"></i>
+            <p>ihr Warenkorb ist leer</p>
+            <a href="Catalog.html"><button>Artikel entdecken</button></a>
+        </section>
 
         <div id="cart-items"></div>
 
@@ -84,13 +89,15 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const cartContainer = document.getElementById("cart-items");
-        
+            let leer = document.querySelector(".leer");
             // Récupérer le panier depuis localStorage
             let products = JSON.parse(localStorage.getItem("products")) || [];
             console.log(products);
             if (products.length === 0) {
-                cartContainer.innerHTML = "<p>Votre panier est vide.</p>";
+                leer.style.display = "flex";
                 return;
+            }else{
+                leer.style.display = "none";
             }
         
             products.forEach(product => {
