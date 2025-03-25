@@ -1,5 +1,7 @@
 
-
+section h1:nth-child(1){
+    padding: 0rem 2rem;
+}
 
 .frage{
     display: flex;
@@ -78,10 +80,11 @@ p{
 .formulaire{
     display: grid;
     grid-template-columns: 1fr 1fr;
+   
     gap: 90px;
     color: white;
     background-color: rgba(0, 0, 0, 0.842);
-    height: 400px;
+
     padding: 4rem 2rem;
 }
 
@@ -131,7 +134,7 @@ textarea{
     padding: 4rem 2rem;
 }
 .mainfooter div{
-    width: 50%;
+    width: 70%;
 }
 .mainfooter h2 {
     font-size: 4rem;
@@ -162,3 +165,26 @@ textarea{
 
 
 
+@media  (max-width: 768px) {
+    section h1:nth-child(1){
+        text-align: center;
+        font-size: 1.7rem;
+    }
+    .formulaire{
+        display: grid;
+        grid-template-areas: "a " "b ";
+        gap: 30px;
+        padding-right: 20px;
+    }
+    .items1{
+        grid-area: b;
+        
+    }
+    .items2{
+        grid-area: a;
+  
+    }
+    .mainfooter div{
+        width: 100%;
+    }
+}

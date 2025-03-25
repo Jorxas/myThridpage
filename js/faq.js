@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Ajouter un marqueur à la position fixe
     L.marker([latitude, longitude]).addTo(map)
-        .bindPopup("📍 fridensstraße 18 ,35394 Giessen")
+        .bindPopup("📍 friedensstraße 18 ,35394 Giessen")
         .openPopup();
 
 
