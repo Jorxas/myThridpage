@@ -24,7 +24,9 @@ section h1:nth-child(1){
     
 }
 .panel {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
 }
 
 hr{
@@ -34,8 +36,13 @@ hr{
     margin-bottom: 40px;
 }
 
-p{
-    margin-top: 10px;
+.panel p {
+    margin: 10px 0;
+}
+
+.accordion.active + .panel {
+    max-height: 10rem; 
+    padding: 10px;
 }
 
 
