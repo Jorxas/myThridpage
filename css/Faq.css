@@ -111,6 +111,7 @@ input,textarea{
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.237);
     border: none;
+    color: white;
 }
 input{
     padding: 8px;
@@ -118,8 +119,9 @@ input{
 }
 
 textarea{
-    padding: 50px;
-    margin-bottom: 30px;
+    padding: 10px;
+    height: 180px;
+    margin-bottom: 20px;
 }
 
 .formulaire button{
